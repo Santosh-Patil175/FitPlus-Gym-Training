@@ -1,0 +1,40 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.Wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+
+.Title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.Content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.backButton {
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  opacity: 0.85;
+}
+
+.notFound {
+  text-align: center;
+  padding: 100px 20px;
+}

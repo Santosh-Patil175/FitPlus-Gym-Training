@@ -1,0 +1,149 @@
+
+.Container {
+  min-height: 100vh;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+   width: 100%;
+  overflow: hidden;
+}
+
+
+.Wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.Title {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Tagline {
+  text-align: center;
+  color: #bbbbbb;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+/* Sections */
+.Section {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.Section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.Section p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Grid for mission & vision */
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Services */
+.servicesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.servicesList li {
+  background-color: #222;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.servicesList li:hover {
+  background-color: #333;
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.statCard {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.statCard h3 {
+  color: #00ff99;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.statCard p {
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .Title {
+    font-size: 32px;
+  }
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 8s linear infinite;
+  
+}
+
+.track :global(img) {
+  margin-right: 10px;
+}
+
+/* Smooth infinite movement */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
