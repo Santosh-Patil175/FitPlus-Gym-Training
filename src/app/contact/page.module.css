@@ -11,6 +11,20 @@
     margin-left: 20px;
 
 }
+.back {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.back:hover {
+  background-color: #ff4d4d;
+}
 
 .title{
     margin-bottom: 20px;
@@ -61,4 +75,26 @@
     to {
         transform: translateY(0px) ;
     }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .btn {
+    align-self: center;
+  }
 }

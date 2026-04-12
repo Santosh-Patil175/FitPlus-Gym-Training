@@ -1,31 +1,87 @@
-import React from 'react'
-import styles from './page.module.css'
-import Image from 'next/image'
+"use client";
+import React, { useState } from 'react';
+import styles from './page.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export const metadata = {
-  title: "FitPlus Gym Contact",
-  description: "Contactpage",
-};
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
+
+    alert("Message sent!");
+
+    setFormData({
+  name: "",
+  email: "",
+  message: ""
+  });
+  };
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}> Contact Us</h1>
+      <Link href="/" className={styles.back} >
+          ← Back to Home
+        </Link>
+      <h1 className={styles.title}>Contact Us</h1>
+
       <div className={styles.content}>
         <div className={styles.img}>
-          <Image src="/contact.jpg" fill={true} alt="contactus" className={styles.image} ></Image>
+          <Image src="/contact.jpg" fill alt="contactus" className={styles.image} />
         </div>
-        <form className={styles.form}>
-          <input type="text" placeholder='Name' className={styles.input} />
-          <input type="email" placeholder='Email' className={styles.input} />
-          <textarea placeholder='Text' cols={30} rows={10} className={styles.textarea}></textarea>
 
-          <button url="#"className={styles.btn}> Send</button>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            className={styles.input}
+            onChange={handleChange}
+          />
 
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            className={styles.input}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="message"
+            placeholder="Text"
+            className={styles.textarea}
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+
+          <button type="submit" className={styles.btn}>
+            Send
+          </button>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

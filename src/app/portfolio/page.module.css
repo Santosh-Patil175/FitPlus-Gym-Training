@@ -1,10 +1,26 @@
-/* page.module.css */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+.back {
+  display: flex;
+  text-align: start;
+  width: max-content;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+  
+}
+
+.back:hover {
+  background-color: #ff4d4d;
 }
 
 .heading {
@@ -12,6 +28,7 @@
   font-weight: 700;
   margin-bottom: 2rem;
   color: #f0ecec;
+  margin-top: 10px;
 }
 
 .grid {
@@ -73,4 +90,28 @@
 .image {
   width: 100%;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .card {
+    transform: none;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
 }

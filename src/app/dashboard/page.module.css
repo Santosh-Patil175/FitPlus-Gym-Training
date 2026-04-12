@@ -8,3 +8,16 @@
   padding: 10px 20px;
   cursor: pointer;
 }
+@media (max-width: 480px) {
+  .logoutBtn {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

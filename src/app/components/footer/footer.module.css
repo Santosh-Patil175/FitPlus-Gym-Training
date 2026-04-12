@@ -15,3 +15,20 @@
 .icons{
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .images {
+    justify-content: center;
+  }
+
+  .icons {
+    font-size: 20px;
+  }
+}

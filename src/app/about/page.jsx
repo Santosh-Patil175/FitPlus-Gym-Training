@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css"; // CSS Module import
 import Image from "next/image";
 import { Content } from "next/font/google";
+import Link from "next/link";
 
 export const metadata = {
   title: "FitPlus Gym About",
@@ -39,6 +40,9 @@ export default function About() {
 
   return (
     <div className={styles.Container}>
+      <Link href="/" className={styles.back} >
+          ← Back to Home
+        </Link>
       <div className={styles.Wrapper}>
 
         <h1 className={styles.Title}>About {data.name}</h1>

@@ -46,6 +46,9 @@ export default function Blog() {
 
   return (
     <div className={styles.Container}>
+      <Link href="/" className={styles.back} >
+          ← Back to Home
+        </Link>
       <div className={styles.Wrapper}>
         <h1 className={styles.Title}>FitPulse Blog</h1>
         <p className={styles.Tagline}>

@@ -26,6 +26,9 @@ const portfolioItems = [
 const Portfolio = () => {
   return (
     <div className={styles.container}>
+      <Link href="/" className={styles.back} >
+          ← Back to Home
+        </Link>
       <h1 className={styles.heading}>Our Portfolio</h1>
 
       <div className={styles.grid}>

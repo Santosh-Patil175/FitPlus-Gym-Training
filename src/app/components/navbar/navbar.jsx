@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const checkLogin = () => {
@@ -35,7 +36,9 @@ const Navbar = () => {
   };
 
   return (
+    
     <div className={styles.container}>
+
       <h1 className={styles.logo}>
         FitPulse Gym & Training
       </h1>

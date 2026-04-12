@@ -31,7 +31,77 @@
   margin-left:25px ;
   cursor: pointer;
   background-color: lightblue;
+  border: none;
   border-radius: 5px;
   width: max-content;
+  transition: 0.3s;
+}
+.button:hover{
+  background-color: #1e3c72;
+  color: white;
 }
 
+.Image{
+    animation: move 4s infinite ease alternate;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(-30px);
+    }
+    to {
+        transform: translateX(0px) ;
+    }
+}
+
+.title{
+  animation: move 4s infinite ease alternate;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(30px);
+    }
+    to {
+        transform: translateX(0px) ;
+    }
+}
+
+.description{
+  animation: move 4s infinite ease alternate;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(30px);
+    }
+    to {
+        transform: translateX(0px) ;
+    }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .button {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .Image {
+    width: 100%;
+  }
+}
